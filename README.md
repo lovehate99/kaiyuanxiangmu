@@ -1,37 +1,24 @@
 # CloudMusic
 
 #### 介绍
-仿网易云音乐
+Vue版仿网易云音乐，[项目预览](http://111.229.105.117)
 
 #### 软件架构
 软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+使用技术
+1.1 vue2.6.11
+1.2 vue-router3.1.5
+1.3 axios0.19.2
+1.4 element-ui2.13.0
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  npm instal
+2.  npm run serve
 
-#### 参与贡献
+特别鸣谢
+1.黑马程序员深圳中心 / [带你进阶Vue技术栈：手把手教你打造自己的音乐播放器](https://www.bilibili.com/video/av93992694?p=1)
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+2.Binaryify / [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+3.黑马程序员 / [Vue全家桶从入门到实战](https://www.bilibili.com/video/av75785188?from=search&seid=14064216843487909476)
