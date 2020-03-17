@@ -18,7 +18,7 @@ Vue版仿网易云音乐，[项目预览](http://111.229.105.117)
 
 #### 使用说明
 
-1.  npm instal
+1.  npm install
 2.  npm run serve
 
 #### 特别鸣谢
