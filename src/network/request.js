@@ -16,7 +16,7 @@ axios.interceptors.request.use(config => {
 
 // 获取轮播图数据
 export function getBanner(param) {
-  return axios.post('banner/get', param)
+  return axios.post('v2/banner/get', param)
 }
 
 // 获取推荐歌单

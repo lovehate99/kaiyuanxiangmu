@@ -10,7 +10,7 @@
       <div class="info-wrap">
         <div class="singer-info">
           <div class="avatar-wrap">
-            <img :src="icon" alt="" />
+            <img :src="icon+'?param=250y150'" alt="" />
           </div>
           <span class="name">{{ mvInfo.artistName }}</span>
         </div>
@@ -33,7 +33,7 @@
           <div class="item" v-for="(item, index) in hotComments" :key="index">
             <div class="icon-wrap">
               <!-- 头像 -->
-              <img :src="item.user.avatarUrl" alt="" />
+              <img :src="item.user.avatarUrl+'?param=50y50'" alt="" />
             </div>
             <div class="content-wrap">
               <div class="content">
@@ -60,7 +60,7 @@
           <div class="item" v-for="(item, index) in comments" :key="index">
             <div class="icon-wrap">
               <!-- 头像 -->
-              <img :src="item.user.avatarUrl" alt="" />
+              <img :src="item.user.avatarUrl+'?param=50y50'" alt="" />
             </div>
             <div class="content-wrap">
               <div class="content">
@@ -87,7 +87,7 @@
         <div class="items">
           <div class="item" v-for="(item, index) in simiMvs" :key="index" @click="playMv(item.id)">
             <div class="img-wrap">
-              <img :src="item.cover" alt="" />
+              <img :src="item.cover+'?param=250y150'" alt="" />
               <span class="iconfont icon-play"></span>
               <div class="num-wrap">
                 <div class="iconfont icon-play"></div>

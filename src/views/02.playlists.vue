@@ -4,7 +4,7 @@
     <div class="top-card">
       <!-- 封面 -->
       <div class="icon-wrap">
-        <img :src="topPlayList.coverImgUrl" alt="" />
+        <img :src="topPlayList.coverImgUrl+'?param=200y200'" alt="" />
       </div>
       <div class="content-wrap">
         <div class="tag">精品歌单</div>
@@ -49,7 +49,7 @@
                 播放量:
                 <span class="num">{{ item.playCount }}</span>
               </div>
-              <img :src="item.coverImgUrl" alt="" />
+              <img :src="item.coverImgUrl+'?param=200y200'" alt="" />
               <span class="iconfont icon-play"></span>
             </div>
             <p class="name">{{ item.name }}</p>

@@ -49,7 +49,7 @@
               <td>{{ index + 1 }}</td>
               <td>
                 <div class="img-wrap">
-                  <img :src="item.al.picUrl" alt="" />
+                  <img :src="item.al.picUrl+'?param=130y130'" alt="" />
                   <span class="iconfont icon-play"></span>
                 </div>
               </td>
@@ -81,7 +81,7 @@
             <div class="item" v-for="(item, index) in hotComments" :key="index">
               <div class="icon-wrap">
                 <!-- 头像 -->
-                <img :src="item.user.avatarUrl" alt="" />
+                <img :src="item.user.avatarUrl+'?param=50y50'" alt="" />
               </div>
               <div class="content-wrap">
                 <div class="content">
@@ -108,7 +108,7 @@
             <div class="item" v-for="(item, index) in comments" :key="index">
               <div class="icon-wrap">
                 <!-- 头像 -->
-                <img :src="item.user.avatarUrl" alt="" />
+                <img :src="item.user.avatarUrl+'?param=50y50'" alt="" />
               </div>
               <div class="content-wrap">
                 <div class="content">

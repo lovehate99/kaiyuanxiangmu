@@ -22,7 +22,7 @@
           <td>{{ index + 1 }}</td>
           <td>
             <div class="img-wrap">
-              <img :src="item.album.picUrl" alt="" />
+              <img :src="item.album.picUrl+'?param=130y130'" alt="" />
               <span class="iconfont icon-play"></span>
             </div>
           </td>

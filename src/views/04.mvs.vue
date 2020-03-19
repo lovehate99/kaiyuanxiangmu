@@ -52,7 +52,7 @@
       <div class="items">
         <div class="item" @click="toMv(item.id)" v-for="(item, index) in mvs" :key="index">
           <div class="img-wrap">
-            <img :src="item.cover" alt="" />
+            <img :src="item.cover+'?param=250y150'" alt="" />
             <div class="num-wrap">
               <div class="iconfont icon-play"></div>
               <div class="num">{{ item.playCount | playNumFormat }}</div>

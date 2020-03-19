@@ -2,6 +2,7 @@
   <div class="result-container">
     <div class="title-wrap">
       <h2 class="title" :keywords="(keywords = $route.query.q)">{{ $route.query.q }}</h2>
+      <!-- <h2 class="title">{{ keywords }}</h2> -->
       <span class="sub-title">{{ count }}</span>
     </div>
     <el-tabs v-model="activeIndex">
@@ -45,7 +46,7 @@
                 播放量:
                 <span class="num">{{ item.playCount | playNumFormat }}</span>
               </div>
-              <img :src="item.coverImgUrl" alt="" />
+              <img :src="item.coverImgUrl+'?param=200y200'" alt="" />
               <span class="iconfont icon-play"></span>
             </div>
             <p class="name">{{ item.name }}</p>
@@ -57,7 +58,7 @@
         <div class="items mv">
           <div class="item" v-for="(item, index) in mvs" :key="index" @click="toMv(item.id)">
             <div class="img-wrap">
-              <img :src="item.cover" alt="" />
+              <img :src="item.cover+'?param=250y150'" alt="" />
               <span class="iconfont icon-play"></span>
               <div class="num-wrap">
                 <div class="iconfont icon-play"></div>
@@ -73,6 +74,10 @@
         </div>
       </el-tab-pane>
     </el-tabs>
+
+    <!-- 分页器 -->
+    <el-pagination @current-change="handleCurrentChange" background layout="prev, pager, next" :total="total" :current-page="pageNum" :page-size="pageSize">
+    </el-pagination>
   </div>
 </template>
 
@@ -83,6 +88,11 @@ export default {
   name: 'result',
   data() {
     return {
+      // 总条数
+      total: 0,
+      // 页码
+      pageNum: 1,
+      pageSize: 10,
       keywords: '',
       activeIndex: 'songs',
       songs: [],
@@ -95,9 +105,9 @@ export default {
   },
 
   created() {
-    this._search()
+    // this._search()
   },
-
+  
   watch: {
     keywords() {
       this._search()
@@ -107,12 +117,15 @@ export default {
       switch (this.activeIndex) {
         case 'songs':
           this.type = 1
+          this.pageNum = 1
           break
         case 'lists':
           this.type = 1000
+          this.pageNum = 1
           break
         case 'mv':
           this.type = 1004
+          this.pageNum = 1
           break
 
         default:
@@ -123,13 +136,24 @@ export default {
   },
 
   methods: {
+    // 页码改变事件
+    handleCurrentChange(val) {
+      // 保存页码
+      this.pageNum = val
+      // 重新获取数据
+      this._search()
+    },
+
     async _search() {
       const { data: resp } = await search({
         s: this.keywords,
         type: this.type,
         limit: this.type === 1004 ? 8 : 10,
-        offset: 0
+        offset: (this.pageNum - 1) * (this.type === 1004 ? 8 : 10)
       })
+      if (resp.code !== 200) {
+        return
+      }
       if (this.type === 1) {
         this.songs = resp.result.songs
         this.count = resp.result.songCount
@@ -140,6 +164,7 @@ export default {
         this.mvs = resp.result.mvs
         this.count = resp.result.mvCount
       }
+      this.total = this.count
     },
 
     async playMusic(id) {

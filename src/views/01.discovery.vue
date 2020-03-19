@@ -18,7 +18,7 @@
             <div class="desc-wrap">
               <span class="desc">{{ item.copywriter }}</span>
             </div>
-            <img :src="item.picUrl" alt="" />
+            <img :src="item.picUrl+'?param=200y200'" alt="" />
             <span class="iconfont icon-play"></span>
           </div>
           <p class="name">{{ item.name }}</p>
@@ -34,7 +34,7 @@
       <div class="items">
         <div class="item" v-for="(item, index) in newSongs" :key="index" @click="playMusic(item.id)">
           <div class="img-wrap">
-            <img :src="item.picUrl" alt="" />
+            <img :src="item.picUrl+'?param=130y130'" alt="" />
             <span class="iconfont icon-play"></span>
           </div>
           <div class="song-wrap">
@@ -50,7 +50,7 @@
       <div class="items">
         <div class="item" v-for="(item, index) in mvs" :key="index" @click="toMv(item.id)">
           <div class="img-wrap">
-            <img :src="item.picUrl" alt="" />
+            <img :src="item.picUrl+'?param=250y150'" alt="" />
             <span class="iconfont icon-play"></span>
             <div class="num-wrap">
               <div class="iconfont icon-play"></div>
