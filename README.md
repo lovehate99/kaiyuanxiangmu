@@ -46,4 +46,4 @@ Vue版仿网易云音乐
 ![MV播放](https://images.gitee.com/uploads/images/2020/0317/204249_b95db264_5551811.png "屏幕截图.png")
 
 ![评论](https://images.gitee.com/uploads/images/2020/0317/204323_5f3a1e9e_5551811.png "屏幕截图.png")
-![的撒啊啊啊啊啊啊啊啊啊啊](http://github.com/lovehate99/douyinapp/blob/master/src/assets/logo.png)
+![的撒啊啊啊啊啊啊啊啊啊啊](http://https://raw.githubusercontent.com/lovehate99/kaiyuanxiangmu/master/public/favicon.ico)
