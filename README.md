@@ -8,7 +8,7 @@ Vue版仿网易云音乐
 
 ##### 使用技术
 
-- vue2.6.11
+- vue
 - vue-router3.1.5
 - axios0.19.2
 - element-ui2.13.0
