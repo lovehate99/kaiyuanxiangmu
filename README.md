@@ -1,7 +1,7 @@
 # CloudMusic
 
 #### 介绍
-Vue版仿网易云音乐，[项目预览](http://111.229.105.117)
+Vue版仿网易云音乐
 
 #### 软件架构
 后端数据来源于网易云音乐接口
@@ -25,9 +25,8 @@ Vue版仿网易云音乐，[项目预览](http://111.229.105.117)
 
 1.黑马程序员深圳中心 / [带你进阶Vue技术栈：手把手教你打造自己的音乐播放器](https://www.bilibili.com/video/av93992694?p=1)
 
-2.Binaryify / [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
-3.黑马程序员 / [Vue全家桶从入门到实战](https://www.bilibili.com/video/av75785188?from=search&seid=14064216843487909476)
+2.黑马程序员 / [Vue全家桶从入门到实战](https://www.bilibili.com/video/av75785188?from=search&seid=14064216843487909476)
 
 #### 演示界面
 
